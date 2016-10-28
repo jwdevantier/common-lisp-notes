@@ -1,0 +1,18 @@
+site_name: Common Lisp Notes
+theme: readthedocs
+
+pages:
+- Index: 'index.md'
+- Terminology: 'terminology.md'
+- Variables: 'variables.md'
+- Functions: 'functions.md'
+- Macros: 'macros.md'
+- Primitive Data Types:
+    - Numbers: 'primitive data types/numbers.md'
+    - Characters & Strings: 'primitive data types/chars_and_strings.md'
+- Data Structures:
+    - Sequences: 'data structures/sequences.md'
+    - Lists: 'data structures/lists.md'
+    - Vectors: 'data structures/vectors.md'
+    - Hash Tables: 'data structures/hash_tables.md'
+- Quickstart: 'quickstart.md'

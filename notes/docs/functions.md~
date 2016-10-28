@@ -1,0 +1,49 @@
+# Functions
+
+## Syntax Overview
+
+```
+(defun foo (param1 &optional opt-param1 opt-param2 &rest rest &key fooparam barparam)
+  "docstring goes here"
+  (return-from foo (+ 2 3)))
+```
+
+## Parameters
+
+### Required
+```
+(defun sum (a b)
+  (+ a b))
+```
+
+### Optional
+
+```
+(defun foo (a &optional (b 10) c)
+  (list a b c))
+```
+
+`(foo 2)` => `(2 10 nil)`
+`(foo 2 7 98)` => `(2 7 98)`
+
+That is, optional parameters are bound to supplied parameters, in order. If no argument
+is supplied, the optional parameter is bound to `nil` unless a default value is supplied as is the case for `b` above.
+
+### Rest (varargs)
+
+### Keyword
+
+## Ordering of parameter types
+You can combine all four parameter types in the same function. Though the ordering
+is strict:
+
+1. required parameters
+2. optional parameters (if any)
+3. rest parameter
+4. keyword parameters
+
+**NOTE** if *rest* & *keyword* parameters are mixed, your rest parameter will be a plist
+of all the keyword parameters.
+
+```
+(defun 

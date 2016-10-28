@@ -1,0 +1,31 @@
+# Variables
+
+  * dynamically typed (errors are detected dynamically, at run-time)
+  * strongly typed
+
+##### Variable >< Binding
+Each time a fn is invoked, CL creates new *bindings* to hold the arguments
+passed by the caller.
+That is, a variable may have multiple bindings over the course of a program
+even at the same time (e.g. recursive functions).
+
+##### Binding Form
+A lisp form which introduces new bindings, `let` is a binding form, so are
+functions.
+
+##### Scope
+The area of the program where the variable name can be used to refer to the
+variable's binding.
+
+##### Shadowing
+The result of nesting two binding forms where one (or more) variable identifiers
+are shared between the binding forms.
+
+```
+(let ((x 10))
+  (let ((x 12))
+    (+ x 2)))
+;; => 14
+```
+
+##### Extent
